@@ -111,9 +111,10 @@
 
 #### 4.2.2 示例代码
 
-接口调用示例：
+**接口调用示例1**：等待完整解析过程结束后，拿到结果，进行连接操作
 
 	[[MSDKDns sharedInstance] WGGetHostByNameAsync:domain returnIps:^(NSArray *ipsArray) {
+		//等待完整解析过程结束后，拿到结果，进行连接操作
 		if (ipsArray && ipsArray.count > 1) {
 			NSString* ipv4 = ipsArray[0];
 			NSString* ipv6 = ipsArray[1];
@@ -127,6 +128,26 @@
 			}
 		}
 	}];
+
+**接口调用示例2**：无需等待，可直接拿到缓存结果，如无缓存，则result为nil
+
+	__block NSArray* result;
+	[[MSDKDns sharedInstance] WGGetHostByNameAsync:domain returnIps:^(NSArray *ipsArray) {
+		result = ipsArray;
+	}];
+	//无需等待，可直接拿到缓存结果，如无缓存，则result为nil
+	if (result) {
+		//拿到缓存结果，进行连接操作
+	} else {
+		//本次请求无缓存，业务可走原始逻辑
+	}
+
+**注意**：业务可根据自身需求，任选一种调用方式：
+
+示例1，优点：可保证每次请求都能拿到返回结果进行接下来的连接操作；
+缺点：异步接口的处理较同步接口稍显复杂。
+
+示例2，优点：对于解析时间有严格要求的业务，使用本示例，可无需等待，直接拿到缓存结果进行后续的连接操作，完全避免了同步接口中解析耗时可能会超过100ms的情况；缺点：第一次请求时，result一定会nil，需业务增加处理逻辑。
 
 ### 4.3 控制台日志: WGOpenMSDKDnsLog
 
