@@ -50,8 +50,10 @@
 		44F12A871B48E7FE00812340 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F12A861B48E7FE00812340 /* AdSupport.framework */; };
 		44F12A8A1B48E88500812340 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F12A891B48E88500812340 /* CoreLocation.framework */; };
 		44F12A8C1B48E8A800812340 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F12A8B1B48E8A800812340 /* Security.framework */; };
+		504F54441ECB02D4001BD7A9 /* SNIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504F54431ECB02D4001BD7A9 /* SNIViewController.m */; };
 		505FAED21D3E136F002C1C6D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 505FAED11D3E136F002C1C6D /* icon.png */; };
 		505FAEEB1D3E138A002C1C6D /* HttpDnsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505FAEE31D3E138A002C1C6D /* HttpDnsViewController.m */; };
+		509467661EAC915800F53427 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 509467651EAC915800F53427 /* launch.png */; };
 		50A0FEDF1D0E8C6A004C502B /* BeaconAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0FEDE1D0E8C6A004C502B /* BeaconAPI_Base.framework */; };
 		5F6AA05C1B57ACF800C6D8D6 /* MSDKDns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6AA05B1B57ACF800C6D8D6 /* MSDKDns.framework */; };
 /* End PBXBuildFile section */
@@ -107,9 +109,12 @@
 		44F12A861B48E7FE00812340 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		44F12A891B48E88500812340 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		44F12A8B1B48E8A800812340 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		504F54421ECB02D4001BD7A9 /* SNIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNIViewController.h; sourceTree = "<group>"; };
+		504F54431ECB02D4001BD7A9 /* SNIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNIViewController.m; sourceTree = "<group>"; };
 		505FAED11D3E136F002C1C6D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		505FAEE21D3E138A002C1C6D /* HttpDnsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpDnsViewController.h; sourceTree = "<group>"; };
 		505FAEE31D3E138A002C1C6D /* HttpDnsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpDnsViewController.m; sourceTree = "<group>"; };
+		509467651EAC915800F53427 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		50A0FEDE1D0E8C6A004C502B /* BeaconAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BeaconAPI_Base.framework; sourceTree = "<group>"; };
 		5F6AA05B1B57ACF800C6D8D6 /* MSDKDns.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSDKDns.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				505FAED11D3E136F002C1C6D /* icon.png */,
+				509467651EAC915800F53427 /* launch.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -191,6 +197,8 @@
 				44F12A3C1B48E52A00812340 /* AppDelegate.m */,
 				505FAEE21D3E138A002C1C6D /* HttpDnsViewController.h */,
 				505FAEE31D3E138A002C1C6D /* HttpDnsViewController.m */,
+				504F54421ECB02D4001BD7A9 /* SNIViewController.h */,
+				504F54431ECB02D4001BD7A9 /* SNIViewController.m */,
 				44F12A411B48E52A00812340 /* Main.storyboard */,
 				44F12A441B48E52A00812340 /* Images.xcassets */,
 				44F12A461B48E52A00812340 /* LaunchScreen.xib */,
@@ -357,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				505FAED21D3E136F002C1C6D /* icon.png in Resources */,
+				509467661EAC915800F53427 /* launch.png in Resources */,
 				44F12A431B48E52A00812340 /* Main.storyboard in Resources */,
 				44F12A481B48E52A00812340 /* LaunchScreen.xib in Resources */,
 				44F12A451B48E52A00812340 /* Images.xcassets in Resources */,
@@ -396,6 +405,7 @@
 				505FAEEB1D3E138A002C1C6D /* HttpDnsViewController.m in Sources */,
 				44F12A3D1B48E52A00812340 /* AppDelegate.m in Sources */,
 				44F12A3A1B48E52A00812340 /* main.m in Sources */,
+				504F54441ECB02D4001BD7A9 /* SNIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +668,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32d8f732-d114-494a-adda-1c2bdeec6d7e";
+				PROVISIONING_PROFILE = "c2850e4b-a384-4f60-a57d-e4f3df49c1dc";
 			};
 			name = DailyBuild;
 		};

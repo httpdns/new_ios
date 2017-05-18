@@ -4,7 +4,7 @@
 <dict>
 
  <key>com.tencent.rdm.uuid</key>
-<string>c79f6ed0-af5e-49f9-a6c5-8be364a64c9e</string>
+<string>036e3f56-5f19-42dc-a940-33cda6e6baec</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -26,26 +26,25 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>COOPERATOR_APPID</key>
-	<string>0I000ZQ6GW1XWVIS</string>
+	<string>业务的灯塔appid</string>
 	<key>DNS_ID</key>
-	<string>888</string>
+	<string>业务的dnsid</string>
 	<key>DNS_KEY</key>
-	<string>3nRsFfEh</string>
+	<string>业务的dnskey</string>
 	<key>IS_COOPERATOR</key>
-	<true/>
-	<key>IS_TEST</key>
-	<true/>
+	<false/>
 	<key>TIME_OUT</key>
-	<integer>1000</integer>
+	<integer>2000</integer>
 	<key>Debug</key>
 	<true/>
+	<key>Hijack_Domain</key>
+	<array>
+		<string>test.qq.tlbb.qq.com</string>
+	</array>
+	<key>Not_Hijack_Domain</key>
+	<array/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

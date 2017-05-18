@@ -70,7 +70,6 @@
                     [_resultTextView insertText:@"本次解析失败，请再次请求一次。"];
                 });
             }
-            
         }];
     }
 }
