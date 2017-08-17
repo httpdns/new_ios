@@ -40,7 +40,7 @@
 
 - (IBAction)usingConnection:(id)sender {
     // 需要设置SNI的URL
-    NSString *originalUrl = @"https://test.qq.tlbb.qq.com:21001/ServerList.xml";
+    NSString *originalUrl = @"业务的URL";
     NSURL* url = [NSURL URLWithString:originalUrl];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     NSArray* result = [[MSDKDns sharedInstance] WGGetHostByName:url.host];
@@ -67,7 +67,7 @@
 
 - (IBAction)usingSession:(id)sender {
     // 需要设置SNI的URL
-    NSString *originalUrl = @"https://test.qq.tlbb.qq.com:21001/ServerList.xml";
+    NSString *originalUrl = @"业务的URL";
     NSURL* url = [NSURL URLWithString:originalUrl];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     NSArray* result = [[MSDKDns sharedInstance] WGGetHostByName:url.host];

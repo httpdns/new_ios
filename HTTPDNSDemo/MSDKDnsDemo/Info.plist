@@ -39,7 +39,7 @@
 	<true/>
 	<key>Hijack_Domain</key>
 	<array>
-		<string>test.qq.tlbb.qq.com</string>
+		<string>业务的域名</string>
 	</array>
 	<key>Not_Hijack_Domain</key>
 	<array/>
